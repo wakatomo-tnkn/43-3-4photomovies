@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Video Access</title>
+    <script>
+        function checkPassword() {
+            const inputPassword = document.getElementById("password").value;
+            const correctPassword = "tyokumen"; // ここに設定したいパスワードを入力してください
+            const videoUrl = "https://youtube.com/playlist?list=PL9EZ4WNBiCgt0FF84jlnk-ZXTz0MXqkej&si=Zagh740HC7qjALed"; // ここにYouTube動画のURLを入力してください
+            
+            if (inputPassword === correctPassword) {
+                window.location.href = videoUrl;
+            } else {
+                alert("パスワードが間違っています。もう一度試してください。");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>43期生 3年4組 フォトムービー</h2>
+    <form onsubmit="checkPassword(); return false;">
+        <label for="password">パスワード:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">送信</button>
+    </form>
+</body>
+</html>
